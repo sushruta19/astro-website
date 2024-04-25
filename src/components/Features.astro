@@ -19,8 +19,8 @@ import Card from "./Card.astro";
 <section class="features">
   <div class="container">
     {
-      featuresData.map((item) => (
-        <Card title={item.title} content={item.body} />
+      featuresData.map((feature) => (
+        <Card title={feature.title} body={feature.body} />
       ))
     }
   </div>
