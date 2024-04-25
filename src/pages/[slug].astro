@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import type { GetStaticPaths } from "astro";
 export async function getStaticPaths() {
   const posts = await Astro.glob("../posts/*.md");
 
-  return posts.map((post) => ({
+  return posts.map((post: any) => ({
     params: {
       slug: post.frontmatter.slug,
     },
